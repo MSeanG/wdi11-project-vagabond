@@ -1,2 +1,12 @@
-<h1>Cities index</h1>
+<h1 class="cities-index">Where do you want to visit?</h1>
 
+<%= link_to "Add new city", new_city_path %>
+
+<div class="city-list">
+    <% @cities.each do |city| %>
+    <div style="background-image: url(<%= city.image %>);" class="city-list-element">
+       <h3><%= city.name %></h3>
+       <p><%= city.location %></p>
+    </div>
+    <% end %>
+</div>
