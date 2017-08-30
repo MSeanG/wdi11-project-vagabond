@@ -6,7 +6,7 @@
     <% @cities.each do |city| %>
     <a href="/cities/<%=city.id%>">
     <div style="background-image: url(<%= city.image %>);" class="city-list-element">
-       <h3><%= city.name %></h3>
+       <h3><%= link_to city.name, city %></h3>
        <p><%= city.location %></p>
     </div></a>
     <% end %>
