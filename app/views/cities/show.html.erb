@@ -1,7 +1,11 @@
 <div style="background-image: url(<%= @city.image %>);" class="city-show-banner">
     <h1><%= @city.name %></h1>
     <div class="city-show-links">
+        <% if user_signed_in? %>
         <%= link_to "edit", edit_city_path(@city.id) %>
+        <% else %>
+        <p> </p>
+        <% end %>
         <p><%= @city.location %></p>
     </div>
 </div>
