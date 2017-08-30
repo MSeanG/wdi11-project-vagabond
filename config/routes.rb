@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root to: 'home#home'
-  resources :cities
+  resources :cities, :posts
   
   devise_for :users, controllers: {
     sessions: 'users/sessions'
