@@ -1,6 +1,7 @@
 <h1 class="cities-index">Where do you want to visit?</h1>
-
+<% if user_signed_in? %>
 <%= link_to "Add new city", new_city_path %>
+<% end %>
 
 <div class="city-list">
     <% @cities.each do |city| %>

@@ -5,4 +5,10 @@ class ApplicationController < ActionController::Base
   # def home
   #   render html: "Welcome to Vagabond!"
   # end
+
+  rescue_from CanCan::AccessDenied do |exception|
+    flash[:notice] = "Access Denied!"
+    flash.keep(:notice)
+    redirect_to root_url
+  end
 end
