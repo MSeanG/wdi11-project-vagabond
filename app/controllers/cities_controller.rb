@@ -31,7 +31,7 @@ def new
     @city = City.find(params[:id])
     @city.update(city_params)
 
-    redirect_to cities_path(@city)
+    redirect_to city_path(@city)
   end
 
   # destroy
