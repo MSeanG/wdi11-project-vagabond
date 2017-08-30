@@ -28,10 +28,10 @@
       
           # create
           def create
-            @post = Post.create!(post_params)
+            @post = city.posts.create!(post_params)
         
             
-            redirect_to posts_path(@post)
+            redirect_to city_path(@post)
           end
         
           # update 
@@ -48,6 +48,9 @@
             @post.destroy
         
             redirect_to posts_path
+          end
+          def city
+            city.find(params[:city_id])
           end
         
           private

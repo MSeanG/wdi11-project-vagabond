@@ -8,12 +8,12 @@
 
 Add a list of posts for this city here.
 <ul>
-<% @city.post.each do |post| %>
+<% @city.posts.each do |post| %>
 <li>
 <%= "#{post.title} (#{post.text})"%>
 </li>
  <% end %>
-// </ul>
+  </ul>
 
 <h3>Add a Post for this city! <%= link_to "(+)", new_post_path %></h3>
 
