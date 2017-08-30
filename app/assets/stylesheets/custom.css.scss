@@ -16,3 +16,38 @@
         text-shadow: 2px 2px 25px #000000;
     }
 }
+.cities-index {
+    text-shadow: 2px 2px 15px #000000;
+}
+.city-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+}
+
+.city-list-element {
+    width: 60vw;
+    height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: right;
+    border-radius: 15px;
+    margin: 15px auto;
+    h3 {
+        font-size: 75px;
+        text-shadow: 2px 2px 15px #000000;
+        margin-right: 25px;
+    }
+    p {
+        text-shadow: 2px 2px 10px #000000;
+        margin-right: 25px;
+    }
+    
+}
+.city-list-element:hover {
+    box-shadow: 0px 0px 25px #54A6ED;
+    h3 {
+        text-shadow: 2px 2px 15px #000066;
+    }
+}
