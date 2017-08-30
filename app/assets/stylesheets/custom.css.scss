@@ -24,6 +24,12 @@
     flex-direction: column;
     justify-content: center;
     width: 100vw;
+    a {
+        text-decoration: none;
+        width: 60vw;
+        height: 200px;
+        margin: 15px auto;
+    }
 }
 
 .city-list-element {
@@ -43,10 +49,13 @@
         text-shadow: 2px 2px 10px #000000;
         margin-right: 25px;
     }
-    
+    :hover {
+        text-decoration: none;
+    }
 }
 .city-list-element:hover {
     box-shadow: 0px 0px 25px #54A6ED;
+    text-decoration: none;
     h3 {
         text-shadow: 2px 2px 15px #000066;
     }

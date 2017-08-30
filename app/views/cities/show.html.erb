@@ -1,6 +1,10 @@
-<h2><%= link_to "(edit)", edit_city_path(@city) %></h2>
-
-
-       <h3><%= @city.name %></h3>
-       <p><%= @city.location %></p>
+<div style="background-image: url(<%= @city.image %>);" class="city-show-banner">
+    <h1><%= @city.name %></h1>
+    <div class="city-show-links">
+        <%= link_to "edit", edit_city_path(@city.id) %>
+        <p><%= @city.location %></p>
     </div>
+</div>
+
+Add a list of posts for this city here.
+
