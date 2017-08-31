@@ -21,9 +21,10 @@
         # create
         def create
           @city = City.find params[:city_id]
-           @post = @city.posts.create(post_params)
+          @user = current_user
+          @post = @city.posts.create(post_params)
 
-           redirect_to city_path(@city)
+          redirect_to city_path(@city)
             
         end
 
@@ -58,6 +59,7 @@
 
   private
     def post_params
+      @user = current_user
       params.require(:post).permit(:title, :text)
     end
 end
