@@ -28,10 +28,9 @@
       
           # create
           def create
-            @post = Post.create(post_params)
-        
-            
-            redirect_to posts_path(@post)
+            @city = City.find(params[:city_id])
+            @post = @city.posts.create(post_params)
+            redirect_to city_path(@city)
           end
         
           # update 
@@ -49,11 +48,10 @@
         
             redirect_to posts_path
           end
-        
-      private
-  def post_params
-    params.require(:post).permit(:title, :text, :city_id)
-  end
+
+  private
+    def post_params
+      params.require(:post).permit(:title, :text)
+    end
 end
-      
 
