@@ -1,6 +1,6 @@
-@import 'bootswatch/slate/variables';
+@import 'bootswatch/cosmo/variables';
 @import 'bootstrap';
-@import 'bootswatch/slate/bootswatch';
+@import 'bootswatch/cosmo/bootswatch';
 
 .cities-index {
     padding-top: 40px;
@@ -12,6 +12,7 @@
     justify-content: center;
     width: 100vw;
     a {
+
         text-decoration: none;
         width: 60vw;
         height: 200px;

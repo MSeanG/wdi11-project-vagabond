@@ -1,4 +1,5 @@
 .login {
+    color:#dbe7f9;
     height: 30px;
     width: 100vw;
     text-align: right;
@@ -8,25 +9,28 @@
     position: fixed;
     margin: 0;
     a {
+        color:#dbe7f9;
         margin: 25px;
         text-shadow: 2px 2px 15px #000000;
     }
 }
 
 .login-container {
+    color:#dbe7f9;
     width: 35vw;
-    background-color: #272B30;
+    background-color:#3a3e4c;
     border-bottom-left-radius: 50px;
     padding: 10px;
 }
 .home-banner {
     width: 35vw;
-    background-color: #272B30;
+    background-color:#3a3e4c;
     border-bottom-right-radius: 50px;
     padding: 10px;
     text-align: left;
 }
 .main-splash {
+    color: #dbe7f9;
     height: 100vh;
     width: 100%;
     background-image: url("Airplane_splash.jpg");
@@ -37,7 +41,13 @@
     align-items: center;
     flex-direction: column;
     h1 {
-        font-size: 75px;
+        font-size: 65px;
         text-shadow: 2px 2px 25px #000000;
+    }
+    h3 {
+        align-content: center;
+        color:#dbe7f9;
+        font-size: 87px;
+        text-shadow: 2px 2px 25px #000000
     }
 }
