@@ -1,0 +1,15 @@
+<h2>Edit City</h2>
+
+<%= form_for [@city, @post] do |f| %>
+  <%= f.label :title%>
+  <%= f.text_field :title %>
+
+  <%= f.label :text %>
+  <%= f.text_field :text %>
+
+  <%= f.submit %>
+<% end %>
+
+<%= form_for [@city, @post], method: :delete do |f| %>
+  <%= f.submit "Delete!", class: "delete" %>
+<% end %>
