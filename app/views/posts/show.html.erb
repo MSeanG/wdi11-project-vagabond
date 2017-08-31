@@ -1,10 +1,10 @@
-<h1><%= @post.title %></h1>
+<div class="post-show-container">
+    <div class="post-show-content">
+        <h1><%= @post.title %></h1>
 
-<p><%= @post.text %></p>
-    <div>
-        <%= link_to "edit", edit_city_post_path %>
+        <p><%= @post.text %></p>
+        <div>
+            <%= link_to "edit", edit_city_post_path %>
+        </div>
     </div>
-
-
-
-
+</div>
