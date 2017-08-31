@@ -32,26 +32,28 @@
           @post = Post.find(params[:id])
         end
       
-   
-      
         # GET /posts/1/edit
         def edit
+          @city = City.find params[:city_id]
+          @post = @city.posts.find(params[:id])
         end
       
           # update 
           def update
-            @post = Post.find(params[:id])
+            @city = City.find params[:city_id]
+            @post = @city.posts.find(params[:id])
             @post.update(post_params)
         
-            redirect_to post_path(@post)
+            redirect_to city_post_path(@post)
           end
         
           # destroy
           def destroy
+            @city = City.find params[:city_id]
             @post = Post.find(params[:id])
             @post.destroy
         
-            redirect_to posts_path
+            redirect_to city_path(@city)
           end
 
   private
