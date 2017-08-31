@@ -1,18 +1,18 @@
 class CitiesController < ApplicationController
-
+  load_and_authorize_resource only: [:edit, :update, :destroy]
 
   def index 
     @cities = City.all
   end
-
-#new 
-def new
+  #new 
+  def new
+    @user = current_user
     @city = City.new
   end
 
- 
   # create
   def create
+    @user = current_user
     @city = City.create!(city_params)
 
     
@@ -26,12 +26,14 @@ def new
 
   # edit
   def edit
+    @user = current_user
     @city = City.find(params[:id])
   end
 
 
   # update 
   def update
+    @user = current_user
     @city = City.find(params[:id])
     @city.update(city_params)
 
@@ -40,6 +42,7 @@ def new
 
   # destroy
   def destroy
+    @user = current_user
     @city = City.find(params[:id])
     @city.destroy
 
