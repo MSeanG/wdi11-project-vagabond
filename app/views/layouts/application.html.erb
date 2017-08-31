@@ -10,13 +10,16 @@
 
   <body>
       <div class="login">
+        <div class="home-banner">
+          <%= link_to "Project Vagabond", root_path %>
+        </div>
           <div class='alerts'>
             <p class="notice"><%= notice %></p>
             <p class="alert"><%= alert %></p>
           </div>
           <div class="login-container">
           <% if user_signed_in? %>
-            <% # <p>Welcome back, <%= link_to current_user.first_name, user_show_page %>
+            <span>Welcome back, <%= link_to current_user.email, cities_path %></span>
             <%= link_to "Log out", destroy_user_session_path, method: :delete %>
           <% else %>
             <%= link_to "Log in", new_user_session_path %>
