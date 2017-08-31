@@ -1,0 +1,36 @@
+.post-list-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.post-item-container {
+    width: 25vw;
+    border: 1px solid #54A6ED;
+    border-radius: 15px;
+    min-height: 25vh;
+    margin: 15px;
+    box-shadow: 0px 0px 15px #54A6ED;
+    p, a{
+        margin: 7px;
+    }
+}
+.post-item-container:hover{
+    box-shadow: 0px 0px 15px #000000;
+    }
+
+.post-item-white-circle {
+    height: 45px;
+    width: 45px;
+    border-radius: 100%;
+    background-color: #54A6ED;
+    margin: 7px;
+}
+
+.post-header{
+    display: flex;
+    justify-content: flex-start;
+}

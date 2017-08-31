@@ -9,20 +9,35 @@
         <p><%= @city.location %></p>
     </div>
 </div>
-<h3>Add a Post for this city! <%= link_to "(+)", new_city_post_path(@city) %></h3>
-<div class="Posts-list-container">
-<ul>
+<% if @city.posts.exists? %>
+<h3><%= link_to "Add a Post", new_city_post_path(@city) %> for this city!</h3>
+<%else%>
+<h3>No one has said anything about this city. Would you like to <%= link_to "add a post", new_city_post_path(@city) %>?</h3>
+<%end%>
+<div class="post-list-container">
   <% @city.posts.each do |post| %>
-    <li>
-      <%= link_to "#{post.title}", city_post_path( @city, post) %>
+    <div class ="post-item-container">
+      <% user = User.find(post.user_id) %>
+      <div class="post-header">
+        <% if user.image %>
+          <div class="post-item-user-circle"><%= image_tag user.image %></div>
+          <%else%>
+          <div class="post-item-white-circle"></div>
+        <%end%>
+        <div class="post-header-info">
+          <p><%= user.email %></p>
+          <%= link_to "#{post.title}", city_post_path( @city, post) %>
+        </div>
+      </div>
       <% if post.text.length > 1000 %>
-      <%= post.text.truncate(997) %>
-      <% else %>
-      <%= post.text %>
+        <p><%= post.text.truncate(997) %></p>
+        <% else %>
+        <p><%= post.text %></p>
       <% end %>
-    </li>
+      <p>Created <%= time_ago_in_words(post.created_at)%> ago<p>
+    </div>
   <% end %>
-</ul>
+
 </div>
 
 
