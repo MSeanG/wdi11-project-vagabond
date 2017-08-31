@@ -3,3 +3,18 @@
 
 
 <h1>user profile page!</h1>
+<div>
+<%= image_tag @user.image %>
+<h2><%= @user.first_name %> </h2>
+<h4><%= @user.location %></h4>
+</div>
+
+<ul>
+  <% @user.posts.each do |post| %>
+    <li>
+      <a href="/posts/<%= post.id %>">
+        <%= "#{post.title} (#{post.text})" %>
+      </a>
+    </li>
+  <% end %>
+</ul>
