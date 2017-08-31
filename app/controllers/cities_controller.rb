@@ -9,7 +9,7 @@ class CitiesController < ApplicationController
     @user = current_user
     @city = City.new
   end
-  
+
   # create
   def create
     @user = current_user
