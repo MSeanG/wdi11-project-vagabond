@@ -11,8 +11,8 @@
 
         # GET /posts/new
         def new
-@city = City.find params[:city_id]
-@post = Post.new
+          @city = City.find params[:city_id]
+          @post = Post.new
 
           @user = current_user
           @post = Post.new
@@ -23,6 +23,8 @@
           @city = City.find params[:city_id]
           @user = current_user
           @post = @city.posts.create(post_params)
+          @post.user_id = current_user.id
+          @post.save
 
           redirect_to city_path(@city)
             
@@ -57,10 +59,13 @@
             redirect_to city_path(@city)
           end
 
+  def user
+    User.find(params[:user_id])
+  end        
   private
     def post_params
       @user = current_user
-      params.require(:post).permit(:title, :text)
+      params.require(:post).permit(:title, :text, :user_id)
     end
 end
 
