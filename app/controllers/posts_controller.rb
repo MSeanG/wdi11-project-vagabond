@@ -8,31 +8,36 @@
         def index
           @posts = Post.all
         end
-      
-        # GET /posts/1
-        # GET /posts/1.json
+
+        # GET /posts/new
+        def new
+@city = City.find params[:city_id]
+@post = Post.new
+
+          @user = current_user
+          @post = Post.new
+        end
+        
+        # create
+        def create
+          @city = City.find params[:city_id]
+           @post = @city.posts.create(post_params)
+
+           redirect_to city_path(@city)
+            
+        end
+
         def show
           @user = current_user
           @post = Post.find(params[:id])
         end
       
-        # GET /posts/new
-        def new
-          @user = current_user
-          @post = Post.new
-        end
+   
       
         # GET /posts/1/edit
         def edit
         end
       
-          # create
-          def create
-            @city = City.find(params[:city_id])
-            @post = @city.posts.create(post_params)
-            redirect_to city_path(@city)
-          end
-        
           # update 
           def update
             @post = Post.find(params[:id])

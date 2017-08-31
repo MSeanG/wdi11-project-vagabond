@@ -11,11 +11,11 @@ Add a list of posts for this city here.
 <ul>
   <% @city.posts.each do |post| %>
     <li>
-      <%= link_to "#{post.title}", city_post_url(@city) %>
+      <%= link_to "#{post.title}", city_post_path( @city, post) %>
     </li>
   <% end %>
 </ul>
 
-<h3>Add a Post for this city! <%= link_to "(+)", new_city_post_url(@city) %></h3>
+<h3>Add a Post for this city! <%= link_to "(+)", new_city_post_path(@city) %></h3>
 
 

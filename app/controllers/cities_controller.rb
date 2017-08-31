@@ -1,12 +1,16 @@
 class CitiesController < ApplicationController
+
+
   def index 
     @cities = City.all
   end
+
 #new 
 def new
     @city = City.new
   end
 
+ 
   # create
   def create
     @city = City.create!(city_params)

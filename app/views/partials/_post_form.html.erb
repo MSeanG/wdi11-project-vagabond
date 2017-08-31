@@ -1,11 +1,9 @@
-<%= form_for @cities.post do |f|%>
+<%= form_for [@city, @post] do |f| %>
   <%= f.label :title%>
   <%= f.text_field :title %>
 
   <%= f.label :text %>
   <%= f.text_field :text %>
-
-
 
   <%= f.submit %>
 <% end %>
