@@ -9,17 +9,20 @@
         <p><%= @city.location %></p>
     </div>
 </div>
-
-Add a list of posts for this city here.
-
+<h3>Add a Post for this city! <%= link_to "(+)", new_city_post_path(@city) %></h3>
+<div class="Posts-list-container">
 <ul>
   <% @city.posts.each do |post| %>
     <li>
       <%= link_to "#{post.title}", city_post_path( @city, post) %>
+      <% if post.text.length > 1000 %>
+      <%= post.text.truncate(997) %>
+      <% else %>
+      <%= post.text %>
+      <% end %>
     </li>
   <% end %>
 </ul>
-
-<h3>Add a Post for this city! <%= link_to "(+)", new_city_post_path(@city) %></h3>
+</div>
 
 
