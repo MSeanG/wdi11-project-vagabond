@@ -2,6 +2,11 @@
 <br />
 
 
-<h1>Hello! <%= @user.first_name %></h1>
+<h1>Hello, <%= @user.first_name %></h1>
 
-<%= link_to "(edit)", edit_user_profile_path(@user) %>
+
+
+<%= image_tag @user.image, size: "100x100" %>
+<br />
+<br />
+<%= link_to "edit", edit_user_profile_path(@user.id) %>
