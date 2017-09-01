@@ -32,6 +32,8 @@
             <% else %>
             <p><%= post.text %></p>
             <% end %>
+            <% city = post.city %>
+            <%= link_to "view post", city_post_path(city, post) %>
             <p>Created <%= time_ago_in_words(post.created_at)%> ago<p>
         </div>
         <% end %>
