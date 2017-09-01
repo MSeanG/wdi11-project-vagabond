@@ -4,7 +4,11 @@
 
         <p><%= @post.text %></p>
         <div>
-            <%= link_to "edit", edit_city_post_path %>
+            <% if current_user != nil %>
+                <% if @post.user_id == current_user.id %>
+                    <%= link_to "edit", edit_city_post_path %>
+                <%end %>
+            <%end%>
         </div>
     </div>
 </div>
