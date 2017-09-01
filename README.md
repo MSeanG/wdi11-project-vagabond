@@ -1,8 +1,6 @@
 # Project Globetrotter
 
-### Overview
-Project is an online application for...
-[Imgur](http://i.imgur.com/bW5SaaT.png)
+![logo](http://i.imgur.com/bW5SaaT.png)
 ### Project Links
 
 - [Heroku](https://wdi11-project-vagabond.herokuapp.com/)
