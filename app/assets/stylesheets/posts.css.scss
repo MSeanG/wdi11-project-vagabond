@@ -30,6 +30,16 @@
     margin: 7px;
 }
 
+.post-item-user-circle {
+    img {
+    height: 45px;
+    width: 45px;
+    border-radius: 100%;
+    background-color: #54A6ED;
+    margin: 7px;
+    }
+}
+
 .post-header{
     display: flex;
     justify-content: flex-start;
