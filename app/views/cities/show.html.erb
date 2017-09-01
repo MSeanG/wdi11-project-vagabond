@@ -33,7 +33,11 @@
           <div class="post-item-white-circle"></div>
         <%end%>
         <div class="post-header-info">
-          <p><%= user.email %></p>
+          <%if user.first_name && user.last_name %>
+            <p><%= user.first_name %> <%=user.last_name %></p>
+          <% else %>
+            <p><%= user.email %></p>
+          <% end %>
           <%= link_to "#{post.title}", city_post_path( @city, post) %>
         </div>
       </div>
