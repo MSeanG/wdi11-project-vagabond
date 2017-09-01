@@ -46,7 +46,7 @@
           @post = @city.posts.find(params[:id])
           @post.update(post_params)
       
-          redirect_to city_post_path(@post)
+          redirect_to city_post_path(@city, @post)
         end
       
         # destroy
