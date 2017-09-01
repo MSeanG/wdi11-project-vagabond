@@ -1,15 +1,23 @@
-<div class="create-new-post-title">Edit City</div>
+<div class="create-new-post-title">Edit Post</div>
 
 <%= form_for [@city, @post] do |f| %>
-  <%= f.label :title%>
-  <%= f.text_field :title %>
+<legend>Edit Post</legend>
+  <fieldset>
+    <div class="field-set">
+      <%= f.label :title%>
+      <%= f.text_field :title %>
 
-  <%= f.label :text %>
-  <%= f.text_field :text %>
-
-  <%= f.submit %>
+      <%= f.label :text %>
+      <%= f.text_field :text %>
+    </div>
+    <div class="actions">
+      <%= f.submit class: "button" %>
+    </div>
+  </fieldset>
 <% end %>
 
 <%= form_for [@city, @post], method: :delete do |f| %>
+<div class="actions">
   <%= f.submit "Delete!", class: "delete" %>
+</div>
 <% end %>
