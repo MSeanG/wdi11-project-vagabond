@@ -28,7 +28,7 @@ Things you may want to cover:
 
 * Navigate to the application homepage.
 
-* Click on 'Sign Up' in order to edit, add, and view cities.
+* Click on 'Sign Up' or 'Log in' in order to edit, add, & post to cities.
 
 * Once logged in, you will be redirected to the cities page where you can add a new city of your choosing; or view, edit, & post to any city that already exists. 
 
