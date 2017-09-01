@@ -10,9 +10,17 @@
     </div>
 </div>
 <% if @city.posts.exists? %>
-<h3><%= link_to "Add a Post", new_city_post_path(@city) %> for this city!</h3>
+  <% if current_user == nil %>
+    <h3><%= link_to "Log in", new_city_post_path(@city) %> to add a post for this city!</h3>
+    <% else %>
+    <h3><%= link_to "Add a Post", new_city_post_path(@city) %> for this city!</h3>
+  <%end %>
 <%else%>
-<h3>No one has said anything about this city. Would you like to <%= link_to "add a post", new_city_post_path(@city) %>?</h3>
+  <% if current_user == nil %>
+    <h3>No one has said anything about this city. Would you like to log in and <%= link_to "add a post", new_city_post_path(@city) %>?</h3>
+  <% else %>  
+    <h3>No one has said anything about this city. Would you like to <%= link_to "add a post", new_city_post_path(@city) %>?</h3>
+  <%end%>
 <%end%>
 <div class="post-list-container">
   <% @city.posts.each do |post| %>
