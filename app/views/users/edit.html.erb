@@ -1,7 +1,18 @@
-<h1>User Edit Page</h1>
-<%=render "partials/user_form"%>
+<h2>Edit User</h2>
 
+<%= form_for(@user, url: user_profile_path) do |f| %>
 
-<%# <%= form_for @user, method: :delete do |f|%>
-<%# <%= f. submit 'delete', class: 'delete'%>
-<%# <%end%> 
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name %>
+
+   <%= f.label :last_name %>
+  <%= f.text_field :last_name %>
+
+   <%= f.label :image %>
+  <%= f.text_field :image %>
+
+     <%= f.label :location %>
+  <%= f.text_field :location %>
+
+  <%= f.submit %>
+<% end %>
