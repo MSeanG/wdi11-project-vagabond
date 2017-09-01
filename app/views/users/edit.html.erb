@@ -1,8 +1,7 @@
 <h2>&nbsp;</h2>
-<h2>Edit User</h2>
 
 <%= form_for(@user, url: user_profile_path) do |f| %>
-  <legend>City Details</legend>
+  <legend>Edit User</legend>
     <fieldset>
       <div class="field-set">
         <%= f.label :first_name %>
@@ -18,7 +17,7 @@
         <%= f.text_field :location %>
       </div>
       <div class="actions">
-        <%= f.submit class: "button" %>
+        <%= f.submit %>
       </div>
     </fieldset>
 <% end %>
