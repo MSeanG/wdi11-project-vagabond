@@ -1,12 +1,18 @@
+<h2>&nbsp;</h2>
 <%= form_for @city do |f|%>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+  <legend>City Details</legend>
+    <div class="field-set">
+      <fieldset>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
 
-  <%= f.label :location %>
-  <%= f.text_field :location %>
+      <%= f.label :location %>
+      <%= f.text_field :location %>
 
-   <%= f.label :image %>
-  <%= f.text_field :image %>
-
-  <%= f.submit %>
+      <%= f.label :image %>
+      <%= f.text_field :image %>
+    </div>
+    <div class="actions">
+      <%= f.submit class: "button"  %>
+    </div>
 <% end %>
