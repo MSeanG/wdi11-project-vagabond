@@ -16,7 +16,7 @@
 
 # README
 
-Globetrotter is a simple travel application built on Rails. Users can sign up, log in, add locations, and post to locations when logged in. 
+Globetrotter is a simple travel application built on Rails. Users can sign up, log in, add locations, and post to locations ***when*** logged in. 
 
 Things you may want to cover:
 
