@@ -4,4 +4,4 @@
 
 <h1>Hello! <%= @user.first_name %></h1>
 
-<%= link_to "(edit)", edit_user_profile_path(@user) %>
+<%= link_to "edit", edit_user_profile_path(@user.id) %>
