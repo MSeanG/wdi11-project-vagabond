@@ -20,7 +20,12 @@
           <div class="login-container">
           <% if user_signed_in? %>
 
-            <span>Welcome back, <%= link_to current_user.email, user_profile_path(current_user.id)%></span>
+            <span>Welcome back, 
+              <% if current_user.first_name %>
+                <%= link_to current_user.first_name, user_profile_path(current_user.id)%></span>
+              <% else %>
+                <%= link_to current_user.email, user_profile_path(current_user.id)%></span>
+              <% end %>
 
             <%= link_to "Log out", destroy_user_session_path, method: :delete %>
           <% else %>
