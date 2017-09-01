@@ -1,8 +1,8 @@
 <h2>&nbsp;</h2>
 <%= form_for @city do |f|%>
   <legend>City Details</legend>
+  <fieldset>
     <div class="field-set">
-      <fieldset>
       <%= f.label :name %>
       <%= f.text_field :name %>
 
@@ -15,4 +15,5 @@
     <div class="actions">
       <%= f.submit class: "button"  %>
     </div>
+  </fieldset>
 <% end %>
