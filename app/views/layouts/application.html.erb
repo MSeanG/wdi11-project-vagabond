@@ -9,27 +9,29 @@
   </head>
 
   <body>
-      <div class="login">
-        <div class="home-banner">
-          <%= link_to "Project Vagabond", cities_path %>
-        </div>
-          <div class='alerts'>
-            <p class="notice"><%= notice %></p>
-            <p class="alert"><%= alert %></p>
-          </div>
-          <div class="login-container">
-          <% if user_signed_in? %>
-
-            <span>Welcome back, <%= link_to current_user.email, user_profile_path(current_user.id)%></span>
-
-            <%= link_to "Log out", destroy_user_session_path, method: :delete %>
-          <% else %>
-            <%= link_to "Log in", new_user_session_path %>
-            <%= link_to "Sign up", new_user_registration_path %>
-          <% end %>
-          </div>
-          
+    <div class="login">
+      <div class="home-banner">
+        <%= link_to "Project Vagabond", cities_path %>
       </div>
-    <%= yield %>
+        <div class='alerts'>
+          <p class="notice"><%= notice %></p>
+          <p class="alert"><%= alert %></p>
+        </div>
+        <div class="login-container">
+        <% if user_signed_in? %>
+
+          <span>Welcome back, <%= link_to current_user.email, user_profile_path(current_user.id)%></span>
+
+          <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+        <% else %>
+          <%= link_to "Log in", new_user_session_path %>
+          <%= link_to "Sign up", new_user_registration_path %>
+        <% end %>
+        </div>
+        
+    </div>
+    <div class="main">
+      <%= yield %>
+    </div>
   </body>
 </html>
