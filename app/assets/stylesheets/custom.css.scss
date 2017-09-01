@@ -1,6 +1,10 @@
 @import 'bootswatch/cosmo/variables';
 @import 'bootstrap';
 @import 'bootswatch/cosmo/bootswatch';
+html,body{width:100%;height:100%;margin:0;padding:0}
+.login {
+ position: static;
+}
 
 .cities-index {
     padding-top: 20px;

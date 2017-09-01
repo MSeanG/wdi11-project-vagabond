@@ -1,13 +1,16 @@
 .login {
+    background-color:#3a3e4c;
     color:#dbe7f9;
-    height: 30px;
+    /*height: 30px;*/
     width: 100vw;
     text-align: right;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
+    position: static;
     margin: 0;
+    padding: 10px;
+    font-size: 1.25em;
     a {
         color:#dbe7f9;
         margin: 25px;
@@ -15,19 +18,23 @@
     }
 }
 
+
+.home-banner {
+    width: 35vw;
+    background-color:#3a3e4c;
+    border-bottom-right-radius: 50px;
+    padding: 0 10px;
+    text-align: left;
+}
+.alerts {
+    display:none;
+}
 .login-container {
     color:#dbe7f9;
     width: 35vw;
     background-color:#3a3e4c;
     border-bottom-left-radius: 50px;
-    padding: 10px;
-}
-.home-banner {
-    width: 35vw;
-    background-color:#3a3e4c;
-    border-bottom-right-radius: 50px;
-    padding: 10px;
-    text-align: left;
+    padding: 0 10px;
 }
 .main-splash {
     color: #dbe7f9;
