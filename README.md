@@ -14,7 +14,7 @@
 * Sean Gilmore
 * Will Huizenga
 
-# README
+# README:
 
 Globetrotter is a simple travel application built on Rails. Users can sign up, log in, add locations, and post to locations ***when*** logged in. 
 
@@ -24,16 +24,20 @@ Things you may want to cover:
 
 * Technologies used: Rails, bootswatch, devise, cancancan, & PSQL
 
-* Configuration
+## HOW IT WORKS:
 
-* Database creation
+* Navigate to the application homepage.
 
-* Database initialization
+* Click on 'Sign Up' in order to edit, add, and view cities.
 
-* How to run the test suite
+* Once logged in, you will be redirected to the cities page where you can add a new city of your choosing; or view, edit, & post to any city that already exists. 
 
-* Services (job queues, cache servers, search engines, etc.)
+* Each of the you create post will also show up in your own personal profile page for the application.
 
-* Deployment instructions
+* Users can ***not*** delete other users posts on city. 
 
-* ...
+* Each post has the user ID of the user who created the post. 
+
+
+
+
