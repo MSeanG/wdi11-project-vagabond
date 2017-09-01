@@ -6,7 +6,7 @@
 - [Heroku](https://wdi11-project-vagabond.herokuapp.com/)
 
 - [Trello Board](https://trello.com/b/hsTFfjCW/wdi-project-vagabond)
-
+- [Pitch Deck](https://docs.google.com/presentation/d/1cLJtC23-D6lVezEmq_XrfiWbRJ54jTVgRBnQFzn80ts/edit#slide=id.g2520318926_0_19)
 ### Project Members
 
 * Aubrey Ellis
