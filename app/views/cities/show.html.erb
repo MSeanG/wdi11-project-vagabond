@@ -11,9 +11,9 @@
 </div>
 <% if @city.posts.exists? %>
   <% if current_user == nil %>
-    <h3><%= link_to "Log in", new_city_post_path(@city) %> to add a post for this city!</h3>
+    <div class="text-align-center"><h3><%= link_to "Log in", new_city_post_path(@city) %> to add a post for this city!</h3></div>
     <% else %>
-    <h3><%= link_to "Add a Post", new_city_post_path(@city) %> for this city!</h3>
+    <div class="text-align-center"><h3><%= link_to "Add a Post", new_city_post_path(@city) %> for this city!</h3></div>
   <%end %>
 <%else%>
   <% if current_user == nil %>
