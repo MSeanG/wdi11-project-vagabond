@@ -14,19 +14,12 @@ class UsersController < ApplicationController
     @user = current_user
     end
 
-
     # update
     def update
     @user = current_user
     @user.update(user_params)
-    end
 
-    #destroy
-    def destroy
-    @user = User.find(params[:id])
-    @user.destroy
-
-    redirect_to user_profile_path
+    redirect_to user_profile_path(@user)
     end
 
   private
