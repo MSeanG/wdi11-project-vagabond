@@ -1,13 +1,41 @@
 <br />
 <br />
 
-
-<h1>Hello, <%= @user.first_name %></h1>
-
-
-<% if @user.image %>
-<%= image_tag @user.image, size: "100x100" %>
-<% end %>
-<br />
-<br />
-<%= link_to "edit", edit_user_profile_path(@user.id) %>
+<div class="user-profile-container">
+    <div class="user-profile-info">
+        <h1>Hello, <%= @user.first_name %></h1>
+        <% if @user.image %>
+        <%= image_tag @user.image, size: "100x100" %>
+        <% end %>
+        <p>Name:</p>
+        <p><%= @user.first_name%> <%= @user.last_name %></p>
+        <p>Location:</p>
+        <p><%= @user.location %>
+        <%= link_to "edit", edit_user_profile_path(@user.id) %>
+    </div>
+    <div class="user-profile-posts">
+        <% @user.posts.each do |post| %>
+        <div class ="post-item-container">
+            <% user = User.find(post.user_id) %>
+            <div class="post-header">
+            <% if user.image %>
+                <div class="post-item-user-circle"><%= image_tag user.image %></div>
+                <%else%>
+                <div class="post-item-white-circle"></div>
+            <%end%>
+            <div class="post-header-info">
+                <strong><%= post.title %></strong>
+            </div>
+            </div>
+            <% if post.text.length > 1000 %>
+            <p><%= post.text.truncate(997) %></p>
+            <% else %>
+            <p><%= post.text %></p>
+            <% end %>
+            <% city = post.city %>
+            <%= link_to "view post", city_post_path(city, post) %>
+            <p>Created <%= time_ago_in_words(post.created_at)%> ago<p>
+        </div>
+        <% end %>
+    </div>
+</div>
