@@ -14,7 +14,7 @@
         <%= link_to "edit", edit_user_profile_path(@user.id) %>
     </div>
     <div class="user-profile-posts">
-        <% @user.posts.each do |post| %>
+        <% @user.posts.order(created_at: :desc).each do |post| %>
         <div class ="post-item-container">
             <% user = User.find(post.user_id) %>
             <div class="post-header">
