@@ -5,8 +5,9 @@
 <h1>Hello, <%= @user.first_name %></h1>
 
 
-
+<% if @user.image %>
 <%= image_tag @user.image, size: "100x100" %>
+<% end %>
 <br />
 <br />
 <%= link_to "edit", edit_user_profile_path(@user.id) %>
