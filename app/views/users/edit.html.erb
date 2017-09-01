@@ -1,18 +1,24 @@
+<h2>&nbsp;</h2>
 <h2>Edit User</h2>
 
 <%= form_for(@user, url: user_profile_path) do |f| %>
+  <legend>City Details</legend>
+    <fieldset>
+      <div class="field-set">
+        <%= f.label :first_name %>
+        <%= f.text_field :first_name %>
 
-  <%= f.label :first_name %>
-  <%= f.text_field :first_name %>
+        <%= f.label :last_name %>
+        <%= f.text_field :last_name %>
 
-   <%= f.label :last_name %>
-  <%= f.text_field :last_name %>
+        <%= f.label :image %>
+        <%= f.text_field :image %>
 
-   <%= f.label :image %>
-  <%= f.text_field :image %>
-
-     <%= f.label :location %>
-  <%= f.text_field :location %>
-
-  <%= f.submit %>
+          <%= f.label :location %>
+        <%= f.text_field :location %>
+      </div>
+      <div class="actions">
+        <%= f.submit class: "button" %>
+      </div>
+    </fieldset>
 <% end %>
