@@ -1,8 +1,8 @@
-# Project Vagabond
+# Project Globetrotter
 
 ### Overview
 Project is an online application for...
-
+[Imgur](http://i.imgur.com/bW5SaaT.png)
 ### Project Links
 
 - [Heroku](https://wdi11-project-vagabond.herokuapp.com/)
@@ -18,14 +18,13 @@ Project is an online application for...
 
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Globetrotter is a simple travel application built on Rails. Users can sign up, log in, add locations, and post to locations when logged in. 
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version: 2.4.1
 
-* System dependencies
+* Technologies used: Rails, bootswatch, devise, cancancan, & PSQL
 
 * Configuration
 
