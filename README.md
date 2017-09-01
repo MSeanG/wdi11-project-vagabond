@@ -32,7 +32,7 @@ Things you may want to cover:
 
 * Once logged in, you will be redirected to the cities page where you can add a new city of your choosing; or view, edit, & post to any city that already exists. 
 
-* Each of the you create post will also show up in your own personal profile page for the application.
+* Each of the posts you add to a city will also show up in your own personal profile page for the application.
 
 * Users can ***not*** delete other users posts on city. 
 
