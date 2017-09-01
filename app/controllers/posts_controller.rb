@@ -40,23 +40,23 @@
           @post = @city.posts.find(params[:id])
         end
       
-          # update 
-          def update
-            @city = City.find params[:city_id]
-            @post = @city.posts.find(params[:id])
-            @post.update(post_params)
-        
-            redirect_to city_post_path(@post)
-          end
-        
-          # destroy
-          def destroy
-            @city = City.find params[:city_id]
-            @post = Post.find(params[:id])
-            @post.destroy
-        
-            redirect_to city_path(@city)
-          end
+        # update 
+        def update
+          @city = City.find params[:city_id]
+          @post = @city.posts.find(params[:id])
+          @post.update(post_params)
+      
+          redirect_to city_post_path(@post)
+        end
+      
+        # destroy
+        def destroy
+          @city = City.find params[:city_id]
+          @post = Post.find(params[:id])
+          @post.destroy
+      
+          redirect_to city_path(@city)
+        end
 
   def user
     User.find(params[:user_id])
