@@ -1,6 +1,8 @@
     class PostsController < ApplicationController
         before_action :authenticate_user!
         load_and_authorize_resource  only: [:edit, :update, :destroy]
+        after_filter :allow_iframe, only: [:basic_embed, :awesome_embed]
+        
       
         # GET /posts
         # GET /posts.json

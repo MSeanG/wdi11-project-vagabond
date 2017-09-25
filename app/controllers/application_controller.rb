@@ -11,4 +11,9 @@ class ApplicationController < ActionController::Base
     flash.keep(:notice)
     redirect_to root_url
   end
+
+  private
+  def allow_iframe
+    response.headers.delete "X-Frame-Options"
+  end
 end
