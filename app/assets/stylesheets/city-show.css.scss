@@ -21,6 +21,17 @@
     a {
         margin: 25px;
     }
+    @media (max-width: 1000px) {
+        h1 {
+            font-size: 125px;
+        }
+        p {
+            font-size: 40px;
+        }
+        a {
+            font-size: 40px;
+        }
+    }
 }
 
 .city-show-links {

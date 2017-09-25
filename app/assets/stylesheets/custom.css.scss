@@ -1,9 +1,9 @@
 @import 'bootswatch/cosmo/variables';
 @import 'bootstrap';
 @import 'bootswatch/cosmo/bootswatch';
-html,body{width:100%;height:100%;margin:0;padding:0}
+html,body{width:100vw;height:100vh;margin:0;padding:0}
 .login {
- position: fixed;
+    position: fixed;
 }
 
 .cities-index {
@@ -16,13 +16,19 @@ html,body{width:100%;height:100%;margin:0;padding:0}
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     width: 100vw;
     a {
-
         text-decoration: none;
         width: 60vw;
         height: 200px;
         margin: 15px auto;
+    }
+    @media (max-width: 1000px) {
+        a {
+            width: 95vw;
+            height: 300px;
+        }
     }
 }
 
@@ -33,7 +39,6 @@ html,body{width:100%;height:100%;margin:0;padding:0}
     background-repeat: no-repeat;
     text-align: right;
     border-radius: 15px;
-    margin: 15px auto;
     color: #BCC6D7;
     h3 {
         font-size: 75px;
@@ -46,6 +51,16 @@ html,body{width:100%;height:100%;margin:0;padding:0}
     }
     :hover {
         text-decoration: none;
+    }
+    @media (max-width: 1000px) {
+        width: 95vw;
+        height: 300px;
+        h3 {
+            font-size: 125px;
+        }
+        p{
+            font-size: 60px;
+        }
     }
 }
 .city-list-element:hover {
