@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
     before_action :authenticate_user!
+    after_filter :allow_iframe, only: [:basic_embed, :awesome_embed]
+    
 
     def new 
     @user = Current_user.new

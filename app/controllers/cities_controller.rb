@@ -1,5 +1,7 @@
 class CitiesController < ApplicationController
   load_and_authorize_resource only: [:edit, :update, :destroy]
+  after_filter :allow_iframe, only: [:basic_embed, :awesome_embed]
+  
 
   def index 
     @cities = City.all
